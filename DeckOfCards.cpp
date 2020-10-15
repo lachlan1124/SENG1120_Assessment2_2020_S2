@@ -1,28 +1,24 @@
 #include "DeckOfCards.h"
 
-    DeckOfCards::DeckOfCards()
-    {
-        for(int i = 0; i < 4; i++) // for each suit
-            for(int j = 0; j < 12; j++) // for each card in each suit
-                {
-                    if (i == 0)
-                    {
+ DeckOfCards::DeckOfCards()
+{
+    for(int i = 2; i < 10; i++)
+        {
+            addCard(i+"H", i);
+            addCard(i+"D", i);
+            addCard(i+"C", i);
+            addCard(i+"S", i);
+            
+        }
+}
 
-                    }
+void DeckOfCards::addCard(std::string face, int value, bool faceUp)
+{
+    cards.enqueue(Card(face, value, faceUp));
+}
 
-                     if (i == 1)
-                    {
-                        
-                    }
-
-                    if (i == 2)
-                    {
-                        
-                    }
-
-                    if (i == 3)
-                    {
-                        
-                    }
-                }
-    }
+void DeckOfCards::test()
+{
+    std::cout << cards.dequeue().getFace() << std::endl;
+    std::cout << cards.dequeue().getFace() << std::endl;
+}

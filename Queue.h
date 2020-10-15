@@ -9,9 +9,9 @@ class Queue
 {
 
     public:
-        void enqueue(valueType toAdd);
+        void enqueue(valueType toAdd)
         {
-           data.addToTail();
+           data.addToTail(toAdd);
         }
 
         valueType dequeue()
