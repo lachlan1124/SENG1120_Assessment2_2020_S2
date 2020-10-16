@@ -11,13 +11,15 @@ class DeckOfCards
 
         DeckOfCards();
 
-        void addCard(std::string face, int value, bool faceUp = false);
+        void shuffle();
 
         void test();
 
 
     private:
         Queue<Card> cards;
+
+        void addCard(std::string face, int value, bool faceUp = false);
 
 };
 
