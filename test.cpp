@@ -9,8 +9,12 @@ int main()
 
     std::cout << test->getData().getValue() << std::endl; 
 
-    DeckOfCards* testDeck = new DeckOfCards();
+    DeckOfCards testDeck;
 
-    testDeck->test();
+//    testDeck.shuffle();
+
+    std::cout << testDeck << std::endl;
+
+
 }
 
