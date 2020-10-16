@@ -11,7 +11,9 @@ int main()
 
     DeckOfCards testDeck;
 
-//    testDeck.shuffle();
+    std::cout << testDeck << std::endl << std::endl << std::endl;
+
+    testDeck.shuffle();
 
     std::cout << testDeck << std::endl;
 

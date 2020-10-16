@@ -1,5 +1,5 @@
 CC=g++ 
-CFLAGS=-c -Wall -std=c++98
+CFLAGS=-c -Wall -std=c++98 -g
 LDFLAGS=
 SOURCES=test.cpp Card.cpp Node.h LinkedList.h Queue.h HandOfCards.cpp DeckOfCards.cpp
 OBJECTS=$(SOURCES:.cpp=.o)

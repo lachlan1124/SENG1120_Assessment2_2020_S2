@@ -247,7 +247,8 @@ class LinkedList
         // Postcondition: A valueType is added to the end of the LinkedList
         void addToTail(const valueType toAdd)
         {
-
+            reset();
+            
             if (size == 0) // if there are no other nodes
             {
                 head = new Node<valueType>(toAdd); // create new node and point head at it
@@ -280,6 +281,14 @@ class LinkedList
 
         void deleteHead()
         {
+           if (size == 1) // if only one node left
+           {
+               delete head;
+               tail = NULL;
+           }
+           
+           if (size > 1)
+           {
             reset();
 
             Node<valueType>* nodeDelete = current; // location of the node being deleted
@@ -291,6 +300,12 @@ class LinkedList
             head = current; // move the head to the new start of the LinkedList
 
             delete nodeDelete; // deallocate the memory assigned to the node
+
+           }
+           
+           
+
+            size--; // increment the size
         }
 
 

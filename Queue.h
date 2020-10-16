@@ -4,35 +4,20 @@
 #include "LinkedList.h"
 
 template <typename valueType>
-
 class Queue
 {
 
     public:
 
-        Queue()
-        {
-            size = 0;
-        }
+        Queue();
 
-        void enqueue(valueType toAdd)
-        {
-           data.addToTail(toAdd);
-           size++;
-        }
+        void enqueue(valueType toAdd);
 
-        valueType dequeue()
-        {
-            valueType tmp = data.getHeadData();
-            data.deleteHead();
-            size--;
-            return tmp;
-        }
+        valueType dequeue();
 
-        int getSize()
-        {
-            return size;
-        }
+
+        int getSize();
+
 
     private:
 
@@ -42,6 +27,6 @@ class Queue
 
 };
 
-//#include "Queue.hpp"
+#include "Queue.hpp"
 
 #endif

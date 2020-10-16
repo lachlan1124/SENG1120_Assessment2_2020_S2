@@ -15,11 +15,11 @@ class DeckOfCards
 
         void shuffle();
 
-        void test();
+        Card draw();
 
         std::string out();
 
-        int size();
+        int getSize();
 
     private:
         Queue<Card> cards;
@@ -27,8 +27,6 @@ class DeckOfCards
         void addCard(std::string face, int value, bool faceUp = false);
 
         void addCard(Card);
-
-        Card removeCard();
 
         void merge( DeckOfCards* Decks[]);
 };
