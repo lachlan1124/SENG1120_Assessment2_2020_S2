@@ -21,6 +21,8 @@ class DeckOfCards
 
         int getSize();
 
+        void faceUp();
+
     private:
         Queue<Card> cards;
 

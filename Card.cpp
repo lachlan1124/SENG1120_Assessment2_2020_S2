@@ -14,17 +14,17 @@
 
      void Card::setFace(std::string f)
     {
-
+        face = f;
     }
 
     void Card::setValue(int i)
     {
-
+        value = i;
     }
 
     void Card::setFaceUp(bool f)
     {
-
+        faceUp = f;
     }
 
     std::string Card::getFace()

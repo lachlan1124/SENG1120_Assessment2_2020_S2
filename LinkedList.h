@@ -8,7 +8,6 @@
 #ifndef GAURD_LINKEDLIST
 #define GAURD_LINKEDLIST
 
-#include <iostream>
 #include "Node.h"
 
 template <typename valueType>
@@ -348,15 +347,14 @@ class LinkedList
             return current->getData();
         }
 };
-/* 
 
-    std::ostream& operator <<(std::ostream& os, LinkedList& p)
+/*     std::ostream& operator <<(std::ostream& os, LinkedList& p)
     {
         p.reset();
 
         os << p.out();
         return os;
-    } */
-
+    } 
+ */
 
 #endif
