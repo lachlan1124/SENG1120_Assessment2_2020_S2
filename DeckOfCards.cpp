@@ -143,7 +143,6 @@ void DeckOfCards::merge(DeckOfCards* shuffledDecks[])
             addCard(shuffledDecks[i]->draw()); // add back to the main deck
         }      
     }
-
     
 }
 

@@ -5,7 +5,7 @@ template<typename valueType> Queue<valueType>::Queue()
     size = 0;
 }
 
-template<typename valueType> void Queue<valueType>::enqueue(valueType toAdd)
+template<typename valueType> void Queue<valueType>::enqueue(const valueType& toAdd)
 {
     data.addToTail(toAdd);
     size++;

@@ -284,6 +284,7 @@ class LinkedList
            {
                delete head;
                tail = NULL;
+               head = NULL;
            }
            
            if (size > 1)

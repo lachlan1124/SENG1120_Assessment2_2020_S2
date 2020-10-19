@@ -11,7 +11,7 @@ class Queue
 
         Queue();
 
-        void enqueue(valueType toAdd);
+        void enqueue(const valueType& toAdd);
 
         valueType dequeue();
 
