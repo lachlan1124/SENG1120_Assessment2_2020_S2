@@ -1,3 +1,9 @@
+//HandOfCards - Class Template Declaration 
+/******************************/
+//Author: Lachlan Marler | C3351542
+//Course: SENG1120
+//Class Description: Stores a queue of cards used by the main program to implement the dealers and players hand
+
 #ifndef GUARD_HANDOFCARDS
 #define GUARD_HANDOFCARDS
 

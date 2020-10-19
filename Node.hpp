@@ -1,3 +1,9 @@
+//Node - Class Template Implementation 
+/******************************/
+//Author: Lachlan Marler | C3351542
+//Course: SENG1120
+//Class Description: stores data and the node next to and prev in the linkedlist
+
 #include "Node.h"
 
 template<typename valueType> Node<valueType>::Node(const valueType& d, Node* n, Node* p)

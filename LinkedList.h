@@ -1,4 +1,4 @@
-//LinkedList - Class Declaration 
+//LinkedList - Class Template Declaration 
 /******************************/
 //Author: Lachlan Marler | C3351542
 //Course: SENG1120

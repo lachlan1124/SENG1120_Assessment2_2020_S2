@@ -1,3 +1,9 @@
+//DeckOfCards - Class Template Implementation 
+/******************************/
+//Author: Lachlan Marler | C3351542
+//Course: SENG1120
+//Class Description: Stores a queue of cards used by the main program to the deck used in the game.
+
 #include "DeckOfCards.h"
 #include <sstream>
 #include <string>
@@ -7,9 +13,10 @@
 #include <stdio.h>
 
 
+// Constructor for a 52 card deck of cards
  DeckOfCards::DeckOfCards()
 {
-    timeval currentTime;
+    timeval currentTime; // store time data
 
     gettimeofday(&currentTime, NULL); // gets time of day to millisecond 
 
@@ -88,6 +95,7 @@ void DeckOfCards::addCard(Card card)
     cards.enqueue(card);
 }
 
+//removes a card from the queue
 Card DeckOfCards::draw()
 {
     return cards.dequeue();
@@ -97,7 +105,7 @@ Card DeckOfCards::draw()
 void DeckOfCards::shuffle()
 {
 
-    DeckOfCards* shuffleDecks[4];
+    DeckOfCards* shuffleDecks[4]; // store the location of the 4 temp decks
 
 
     for(int i = 0; i < 4; i++) // for each new deck
@@ -111,7 +119,7 @@ void DeckOfCards::shuffle()
         }
     }
 
-    for(int k = 0; k < 1000; k++) // remove card from top of random deck and add to the bottom of a new deck for 1000 times
+    for(int k = 0; k < 1000; k++) // remove card from top of random deck and add to the bottom of a new deck for ~1000 times 
     {
         int randA = rand() % 4;
         int randB = rand() % 4;
@@ -123,9 +131,6 @@ void DeckOfCards::shuffle()
             shuffleDecks[randB]->addCard(tmp); // add card to deck B
         }
 
-
-
- 
     }
 
     merge(shuffleDecks); // merge the 4 shuffled decks togther
@@ -147,7 +152,7 @@ void DeckOfCards::merge(DeckOfCards* shuffledDecks[])
 }
 
 
-
+// returns the amount of cards in the deck
 int DeckOfCards::getSize()
 {
     return cards.getSize();
@@ -156,16 +161,17 @@ int DeckOfCards::getSize()
 // removes card, gets face, adds card back to deck
 std::string DeckOfCards::out()
 {
-    Card tmp;
-    std::string face;
+    Card tmp; // stores the card
+    std::string face; // store the face of that card
 
-    tmp = draw();
-    face = tmp.getFace();
-    addCard(tmp);
-    return face;
+    tmp = draw(); // get top card
+    face = tmp.getFace(); // gets face
+    addCard(tmp); // add card back to the deck
+
+    return face; // return the face
 }
 
-
+// operator overload for DeckOfCards
 std::ostream& operator <<(std::ostream& os, DeckOfCards& p)
 {
     //for each card

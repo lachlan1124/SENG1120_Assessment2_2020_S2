@@ -1,3 +1,10 @@
+//DeckOfCards - Class Template Declaration 
+/******************************/
+//Author: Lachlan Marler | C3351542
+//Course: SENG1120
+//Class Description: Store the face of a card (10-H) the value of that card and if it is faceUp or faceDown.
+
+
 #ifndef GAURD_CARD
 #define GAURD_CARD
 

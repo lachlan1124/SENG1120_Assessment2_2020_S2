@@ -1,3 +1,9 @@
+//Queue - Class Template Implementation 
+/******************************/
+//Author: Lachlan Marler | C3351542
+//Course: SENG1120
+//Class Description: Restricts the access on a linkedlist, data enters at the tail and exits at the head.
+
 
 #include "Queue.h"
 template<typename valueType> Queue<valueType>::Queue()

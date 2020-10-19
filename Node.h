@@ -1,8 +1,8 @@
-//Node - Class Declaration 
+//Node - Class Template Declaration 
 /******************************/
 //Author: Lachlan Marler | C3351542
 //Course: SENG1120
-//Class Description: 
+//Class Description: stores data and the node next to and prev in the linkedlist
 
 #ifndef GUARD_NODE
 #define GUARD_NODE
