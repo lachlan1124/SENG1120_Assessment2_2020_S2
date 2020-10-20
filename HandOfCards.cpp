@@ -10,16 +10,18 @@
 
 HandOfCards::HandOfCards() {}
 
+HandOfCards::~HandOfCards() {}
+
 
 //adds a single card to the hand
-void HandOfCards::add(Card card, bool face)
+void HandOfCards::add(Card card,bool face)
 {
     card.setFaceUp(face);
     cards.enqueue(card);
 } 
 
 //counts the value of all the cards facing up
-int HandOfCards::count()
+int HandOfCards::count() 
 {
     int val = 0;
     for(int i = 0; i < cards.getSize(); i++) //for each card in the hand

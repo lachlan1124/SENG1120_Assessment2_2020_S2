@@ -74,7 +74,7 @@
 }
 
 //creates a empty deck of cards, used to shuffle the main deck
-DeckOfCards::DeckOfCards(bool empty)
+DeckOfCards::DeckOfCards(const bool empty)
 {
     timeval currentTime;
 
@@ -83,14 +83,16 @@ DeckOfCards::DeckOfCards(bool empty)
     srand (currentTime.tv_usec * time(NULL) * currentTime.tv_sec); // seeds the random generator with the time
 }
 
+DeckOfCards::~DeckOfCards() {}
+
 // adds card to the deck by creating a new card
-void DeckOfCards::addCard(std::string face, int value, bool faceUp)
+void DeckOfCards::addCard(const std::string face,const int value,const bool faceUp)
 {
     cards.enqueue(Card(face, value, faceUp));
 }
 
 // uses an existing card to add to the deck
-void DeckOfCards::addCard(Card card)
+void DeckOfCards::addCard(const Card card)
 {
     cards.enqueue(card);
 }
@@ -147,6 +149,9 @@ void DeckOfCards::merge(DeckOfCards* shuffledDecks[])
         {
             addCard(shuffledDecks[i]->draw()); // add back to the main deck
         }      
+
+        delete shuffledDecks[i]; // delete the deck
+
     }
     
 }

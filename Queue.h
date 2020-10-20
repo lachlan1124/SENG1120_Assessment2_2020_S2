@@ -17,12 +17,14 @@ class Queue
 
         Queue();
 
+        ~Queue();
+
         void enqueue(const valueType& toAdd);
 
         valueType dequeue();
 
 
-        int getSize();
+        int getSize() const;
 
 
     private:

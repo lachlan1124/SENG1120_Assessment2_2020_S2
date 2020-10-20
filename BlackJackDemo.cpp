@@ -63,6 +63,6 @@ int main()
 			if (player.count() < dealer.count()) {cout << "THE DEALER WON!" << endl; return 0;}
 		}
 	}
-		
+
 	return 0;
 }

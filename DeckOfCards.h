@@ -17,7 +17,9 @@ class DeckOfCards
 
         DeckOfCards();
 
-        DeckOfCards(bool empty);
+        DeckOfCards(const bool empty);
+
+        ~DeckOfCards();
 
         void shuffle();
 
@@ -32,11 +34,11 @@ class DeckOfCards
     private:
         Queue<Card> cards;
 
-        void addCard(std::string face, int value, bool faceUp = false);
+        void addCard(const std::string face,const int value,const bool faceUp = false);
 
-        void addCard(Card);
+        void addCard(const Card);
 
-        void merge( DeckOfCards* Decks[]);
+        void merge(DeckOfCards* Decks[]);
 };
 
 

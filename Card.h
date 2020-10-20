@@ -16,11 +16,12 @@ class Card
     public:
 
         Card();
-        Card(std::string f, int i, bool fa);
+        Card(const std::string f, const int i,const bool fa);
+        ~Card();
 
-        void setFace(std::string f);
-        void setValue(int i);
-        void setFaceUp(bool f);
+        void setFace(const std::string f);
+        void setValue(const int i);
+        void setFaceUp(const bool f);
 
         std::string getFace();
 

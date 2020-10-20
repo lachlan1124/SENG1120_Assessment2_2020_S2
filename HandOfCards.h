@@ -17,6 +17,8 @@ class HandOfCards
 
         HandOfCards();
 
+        ~HandOfCards();
+
         int count();
 
         int countAll();

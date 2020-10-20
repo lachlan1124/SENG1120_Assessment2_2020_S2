@@ -7,29 +7,29 @@
 
 #include "Card.h"
 
-    Card::Card(std::string f, int i, bool fa)
+    Card::Card(const std::string f,const int i,const bool fa)
     {
         face = f;
         value = i;
         faceUp = fa;
     }
 
-    Card::Card()
-    {
-        
-    }
+    Card::Card() {}
 
-     void Card::setFace(std::string f)
+    Card::~Card() {}
+
+
+     void Card::setFace(const std::string f)
     {
         face = f;
     }
 
-    void Card::setValue(int i)
+    void Card::setValue(const int i)
     {
         value = i;
     }
 
-    void Card::setFaceUp(bool f)
+    void Card::setFaceUp(const bool f)
     {
         faceUp = f;
     }
